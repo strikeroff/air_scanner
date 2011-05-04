@@ -1,0 +1,24 @@
+base: &base
+  adapter: postgresql
+  host: localhost
+  username: postgres
+  password: postgres
+  schema_search_path: public
+  encoding: utf8
+  template: template0
+
+development:
+  database: air_scanner
+  <<: *base
+
+test:
+  database: air_scanner_testing
+  <<: *base
+
+production:
+  database: air_scanner_production
+  <<: *base
+
+staging:
+  database: air_scanner_staging
+  <<: *base
