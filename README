@@ -1,1 +1,5 @@
 - just for fun :)
+
+Import airports
+
+COPY airports ("name", "english_name", "rus_city_name", "eng_city_name", "country", "iso_code","latitude", "longitude" ) FROM 'Rails.app_path/spec/fixtures/apinfo.csv' WITH CSV HEADER;

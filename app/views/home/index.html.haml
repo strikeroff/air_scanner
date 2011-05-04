@@ -1,0 +1,14 @@
+-form_tag search_path do
+  .Destination
+    =label_tag :from
+    =text_field_tag :origin
+    =label_tag :to
+    =text_field_tag :destination
+  .Period
+    = label_tag :when
+    = date_select :departure,:date
+    = label_tag "how long"
+    = select_tag :period, options_for_select((0..4).to_a,0)
+    %span Weeks
+  .Control
+    =submit_tag "Find!"
